@@ -1,0 +1,12 @@
+<div class="inventory">
+  <div class="flex items-center justify-center h-full">
+    <form class="w-96 flex flex-col p-4 gap-3 bg-white/80 rounded" [formGroup]="loginForm" (ngSubmit)="iniciarSesion()">
+      <img src="/logo.png" alt="">
+      <label for="usuario" class="font-bold">Usuario</label>
+      <input type="text" placeholder="Usuario..." class="input" name="usuario" formControlName="usuario" />
+      <label for="password" class="font-bold">Contraseña</label>
+      <input type="password" placeholder="Contraseña..." class="input" name="password" formControlName="password"/>
+      <button class="btn btn-success text-white ">Iniciar Sesion</button>
+    </form>
+  </div>
+</div>
