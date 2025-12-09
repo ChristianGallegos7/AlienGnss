@@ -1,12 +1,57 @@
 <div class="inventory">
-  <div class="flex items-center justify-center h-full">
-    <form class="w-96 flex flex-col p-4 gap-3 bg-white/80 rounded" [formGroup]="loginForm" (ngSubmit)="iniciarSesion()">
-      <img src="/logo.png" alt="">
-      <label for="usuario" class="font-bold">Usuario</label>
-      <input type="text" placeholder="Usuario..." class="input" name="usuario" formControlName="usuario" />
-      <label for="password" class="font-bold">Contraseña</label>
-      <input type="password" placeholder="Contraseña..." class="input" name="password" formControlName="password"/>
-      <button class="btn btn-success text-white ">Iniciar Sesion</button>
+  <div class="flex items-center justify-center h-full overlay">
+    <form
+      class="w-full max-w-md flex flex-col gap-5 p-8 bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl border border-white/60"
+      [formGroup]="loginForm"
+      (ngSubmit)="iniciarSesion()"
+    >
+      <!-- Header -->
+      <div class="flex flex-col items-center gap-2 mb-2">
+        <img src="/logo.png" alt="Allien Gnss" class="h-16">
+        <h1 class="text-2xl font-semibold text-slate-800">Allien Gnss</h1>
+        <p class="text-sm text-slate-500 text-center">
+          Accede al panel de inventario
+        </p>
+      </div>
+
+      <!-- Usuario -->
+      <div class="flex flex-col gap-1">
+        <label for="usuario" class="font-medium text-sm text-slate-600">Usuario</label>
+        <input
+          id="usuario"
+          type="text"
+          placeholder="Usuario..."
+          class="input w-full rounded-lg bg-white/90 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-400/60 focus:border-emerald-500"
+          name="usuario"
+          formControlName="usuario"
+        />
+      </div>
+
+      <!-- Contraseña -->
+      <div class="flex flex-col gap-1">
+        <label for="password" class="font-medium text-sm text-slate-600">Contraseña</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Contraseña..."
+          class="input w-full rounded-lg bg-white/90 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-400/60 focus:border-emerald-500"
+          name="password"
+          formControlName="password"
+        />
+      </div>
+
+      <!-- Extras -->
+      <div class="flex items-center justify-between text-xs text-slate-500">
+ 
+        <a href="#" class="hover:text-emerald-600">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <!-- Botón -->
+      <button
+        class="btn w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl py-2 shadow-md hover:shadow-lg transition-all"
+      >
+        Iniciar sesión
+      </button>
     </form>
   </div>
 </div>

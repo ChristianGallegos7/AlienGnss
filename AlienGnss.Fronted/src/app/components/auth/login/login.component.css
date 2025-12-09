@@ -4,4 +4,19 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+/* Capa oscura encima del fondo */
+.inventory::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Para que el contenido quede por encima de la capa oscura */
+.inventory .overlay {
+  position: relative;
+  z-index: 1;
 }
