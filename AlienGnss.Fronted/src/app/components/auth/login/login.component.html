@@ -7,7 +7,7 @@
     >
       <!-- Header -->
       <div class="flex flex-col items-center gap-2 mb-2">
-        <img src="/logo.png" alt="Allien Gnss" class="h-16">
+        <img src="/logo.png" alt="Allien Gnss" class="h-16" />
         <h1 class="text-2xl font-semibold text-slate-800">Allien Gnss</h1>
         <p class="text-sm text-slate-500 text-center">
           Accede al panel de inventario
@@ -16,7 +16,9 @@
 
       <!-- Usuario -->
       <div class="flex flex-col gap-1">
-        <label for="usuario" class="font-medium text-sm text-slate-600">Usuario</label>
+        <label for="usuario" class="font-medium text-sm text-slate-600"
+          >Usuario</label
+        >
         <input
           id="usuario"
           type="text"
@@ -29,7 +31,9 @@
 
       <!-- Contraseña -->
       <div class="flex flex-col gap-1">
-        <label for="password" class="font-medium text-sm text-slate-600">Contraseña</label>
+        <label for="password" class="font-medium text-sm text-slate-600"
+          >Contraseña</label
+        >
         <input
           id="password"
           type="password"
@@ -42,13 +46,13 @@
 
       <!-- Extras -->
       <div class="flex items-center justify-between text-xs text-slate-500">
- 
         <a href="#" class="hover:text-emerald-600">¿Olvidaste tu contraseña?</a>
       </div>
 
       <!-- Botón -->
       <button
-        class="btn w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl py-2 shadow-md hover:shadow-lg transition-all"
+        [disabled]="loginForm.invalid"
+        class="btn w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl py-2 shadow-md hover:shadow-lg transition-all disabled:bg-slate-200 disabled:text-slate-500 disabled:cursor-not-allowed disabled:shadow-none"
       >
         Iniciar sesión
       </button>
